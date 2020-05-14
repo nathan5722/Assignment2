@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="initial-scale=1">
+		<meta name="description" content="Theatre Ticket">
+        <title>Theatre Tickets</title>
+    </head>
+    <body>
+        <div id="main">
+            <h1>Theatre Tickets</h1>
+
+
+            <div id="form">
+            <form onsubmit="return false">
+                <fieldset>
+
+
+                <legend>Name:</legend>
+                <input type="text" id="name" name="name" placeholder="enter name" required/><br>
+              
+
+                <legend>Address:</legend>
+                <input type="text" id="address" name="address" placeholder="enter address" required/><br>
+               <fieldset>
+                    <legend>Number of tickets:</legend>
+                    <input type="number" min="0" id="tickets" name="tickets" placeholder="enter number" required/><br>
+                </fieldset>
+
+                <legend>Film:</legend>
+                <select id="show" name="show">
+                   <option value="phantom" id="phantom">Phantom of the Opera</option>
+                   <option value="hamilton" id="hamilton">Hamilton</option>
+                   <option value="lionking" id="lion" selected>Lion King </option>
+                   <option value="misssaigon" id="saigon">Miss Saigon</option>
+                </select>
+                    <legend>Delivery:</legend>
+                    <input type="radio" id="edelivery" name="method" value="e-Delivery (free)" checked>
+                    <label for="edelivery">Online Delivery</label>
+                 
+                    <input type="radio" id="boxoffice" name="method" value="Box Office (£1.50)">
+                    <label for="boxoffice">Box Office</label>
+             
+                    <input type="radio" id="posted" name="method" value="Posted (£3.99)">
+                    <label for="posted">Postal </label>
+                
+
+                    <br>
+                    <input type="submit" onclick="displayDetails()" value="Submit" />
+                    <input type="reset" onclick="clearDetails()" value="Clear" />
+             
+            </form>
+            </div>
+
+
+            <div id="result">
+                <div id="nameResult"> Name: </div> <br>
+                <div id="addressResult"> Address: </div> <br>
+                <div id="showResult"> Film: </div> <br>
+				<div id="ticketsResult"> Number of tickets:  </div> <br>
+                <div id="methodResult">Postage: </div> <br>
+                <div id="total">Total: </div> <br>
+                <div id="discountResult">Discount: </div> <br>
+                <div id="finalTotal">Total Cost: </div>
+            </div>
+
+            </div>
+        <!-- footer -->
+        <footer>
+        </footer>
+
+            <!-- javascript -->
+            <script async src="scripts/main.js"></script>
+        </body>
+        </html>
